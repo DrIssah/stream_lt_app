@@ -128,7 +128,9 @@ probability_of_linkedin = prediction_proba[0][1]
 
 # Display result
 st.subheader("Prediction Result")
+st.write(f"The person would be classified as a LinkedIn user: {prediction[0]}")
 st.write(f"Probability of being a LinkedIn user: {probability_of_linkedin:.2%}")
+
 
 # Display user-friendly values in the sidebar
 st.sidebar.header("User Input Features (User-Friendly)")
