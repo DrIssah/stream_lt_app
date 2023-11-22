@@ -30,6 +30,16 @@ def check_greater_than_v2(column, value):
 ss = pd.DataFrame({"sm_li": s['web1h']})
 ss = clean_sm(ss)
 
+ss['income'] = check_greater_than(s['income'],9)
+ss['education'] = check_greater_than(s['educ2'],8)
+
+##parent (binary), married (binary), female (binary), and age (numeric, above 98 considered missing)
+ss['parent'] = check_greater_than_v2(s['par'],1)
+ss['married'] = check_greater_than_v2(s['marital'],1)
+ss['female'] = check_greater_than_v2(s['gender'],2)
+
+ss['age'] = check_greater_than(s['age'],98)
+
 # Mapping for coded values
 income_mapping = {
     1: "Less than $10,000",
