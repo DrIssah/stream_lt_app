@@ -5,6 +5,12 @@ import pandas as pd
 import streamlit as st
 from sklearn.linear_model import LogisticRegression
 
+
+import warnings
+
+# Ignore all warnings
+warnings.filterwarnings('ignore')
+
 # Load the data
 file_name = "social_media_usage.csv"
 s = pd.read_csv(file_name)
