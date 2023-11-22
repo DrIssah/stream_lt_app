@@ -114,9 +114,9 @@ st.sidebar.header("User Input Features")
 # Define input fields
 income = st.sidebar.slider("Income", 1, 9, 5)
 education = st.sidebar.slider("Education", 1, 8, 4)
-parent = st.sidebar.radio("Parent", [1, 2])
-married = st.sidebar.radio("Marital Status", [1, 2])
-female = st.sidebar.radio("Gender", [1, 2])
+parent = st.sidebar.radio("Parent[1.Parent 2. Not Parent]", [1, 2])
+married = st.sidebar.radio("Marital Status [1. Married 2. Not Married]", [1, 2])
+female = st.sidebar.radio("Female [1. Female 2. Not Female]", [1, 2])
 age = st.sidebar.slider("Age", 18, 98, 42)
 
 # Create a DataFrame for the user input
