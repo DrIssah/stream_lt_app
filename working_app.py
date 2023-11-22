@@ -40,6 +40,9 @@ ss['female'] = check_greater_than_v2(s['gender'],2)
 
 ss['age'] = check_greater_than(s['age'],98)
 
+#drop nulls
+ss = ss.dropna()
+
 # Mapping for coded values
 income_mapping = {
     1: "Less than $10,000",
