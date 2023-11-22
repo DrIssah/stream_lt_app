@@ -84,12 +84,7 @@ gender_mapping = {
     99: "Refused"
 }
 
-# Apply mappings to create readable columns
-ss['income'] = ss['income'].map(income_mapping)
-ss['education'] = ss['education'].map(education_mapping)
-ss['parent'] = ss['parent'].map(parent_mapping)
-ss['marital'] = ss['marital'].map(marital_mapping)
-ss['gender'] = ss['gender'].map(gender_mapping)
+
 
 # Prepare data for modeling
 y = ss['sm_li']
