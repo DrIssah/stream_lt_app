@@ -127,8 +127,9 @@ prediction_proba = model.predict_proba(user_input)
 probability_of_linkedin = prediction_proba[0][1]
 
 # Display result
+predicted_class = 1 if prediction_proba[0][1] >= 0.5 else 0
 st.subheader("Prediction Result")
-st.write(f"The person would be classified as a LinkedIn user: {prediction_proba[0]}")
+st.write(f"The person would be classified as a LinkedIn user: {predicted_class}")
 st.write(f"Probability of being a LinkedIn user: {probability_of_linkedin:.2%}")
 
 
