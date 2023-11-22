@@ -73,28 +73,18 @@ education_mapping = {
 
 parent_mapping = {
     1: "Yes",
-    2: "No",
-    8: "(VOL.) Don't know",
-    9: "(VOL.) Refused"
+    2: "No"
 }
 
 marital_mapping = {
     1: "Married",
-    2: "Living with a partner",
-    3: "Divorced",
-    4: "Separated",
-    5: "Widowed",
-    6: "Never been married",
-    8: "(VOL.) Don't know",
-    9: "(VOL.) Refused"
+    2: "No"
+    
 }
 
 gender_mapping = {
-    1: "Male",
-    2: "Female",
-    3: "Other",
-    98: "Don't know",
-    99: "Refused"
+    1: "Female",
+    2: "Not Female"
 }
 
 
@@ -119,7 +109,7 @@ st.sidebar.header("User Input Features")
 income = st.sidebar.slider("Income", 1, 9, 5)
 education = st.sidebar.slider("Education", 1, 8, 4)
 parent = st.sidebar.radio("Parent", [1, 2])
-married = st.sidebar.radio("Marital Status", [1, 2, 3, 4, 5, 6])
+married = st.sidebar.radio("Marital Status", [1, 2])
 female = st.sidebar.radio("Gender", [1, 2])
 age = st.sidebar.slider("Age", 18, 98, 42)
 
